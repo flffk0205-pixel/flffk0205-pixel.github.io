@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://kit.fontawesome.com/f765e4def9.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<link rel="icon" href="img/pavicon.png" type="img/png" sizes="50*50">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap">
+<link rel="stylesheet" href="css/common.css">
+<title>단국 대학교</title>
+<style>
+
+.intro{ position: fixed; height: 100vh;  width: 100%; left: 0; top:0px;   text-align: center; overflow: auto;
+z-index: 10000;padding: 30px; padding-top: 50px;background-color: rgba(0,0,0,0.8);}
+.intro-wrap{max-width: 60%; margin: auto; padding: 30px; position: relative;
+    border-radius: 30px; background-color: #fff;}
+.intro img{margin: auto;border-radius: 30px;margin-top: 40px;}
+.close{position: absolute; right:40px; top: 20px; z-index: 15000; font-size: 50px; cursor: pointer;}
+.intro p{font-size: 36px; color: red; font-weight: 500;}
+
+@media(max-width:991px){
+
+.intro-wrap{max-width: 100%;}
+
+.close{font-size: 40px;}
+.intro p{font-size: 28px; font-weight: 500;}
+}
+
+@media(max-width:767px){
+
+.intro-wrap{max-width: 100%;}
+
+.close{font-size: 20px; top: 10px;}
+.intro p{font-size: 16px; font-weight: 500;}
+}
+
+
+
+.banner1{position: relative; height: 100vh;}
+.banner1-1{position: absolute;}
+    /* 글자 필기체 이미지  */
+    .banner1-1 { position:absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); z-index: 2; }
+
+    /* 버튼 묶음         */
+    .campus-buttons {  position: absolute; 
+                bottom: 100px; left: 100px; z-index: 10;}
+
+
+ .banner1 .btn{border-radius: 60px;  padding:10px 60px ;
+  font-size: 24px;}
+  
+    .btn-blue {        
+        background-color: #13ADE5;
+        border: 2px solid white;        
+        color: white;
+        box-shadow: 0 0 0 15px #13ADE5;
+        margin-right: 60px;
+        }
+
+    .btn-white {
+        background-color: #fff;             
+        border: 2px solid #13ADE5;        
+        color: #13ADE5; 
+        box-shadow: 0 0 0 15px white; 
+        }
+.phone-img{display: none;}
+
+
+
+
+/* 스와이퍼 ====================  */
+.banner1{position: relative;}
+
+
+ .swiper {
+      width: 100%;
+      height: 100vh;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #444;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+
+/* 두번째 섹션=============================== */
+.banner2 {padding: 100px 0;}
+
+.box {display: flex; justify-content: space-between; gap: 40px; }
+
+.info-box {padding: 20px 40px; border: 20px solid #13ADE5; border-radius: 120px; display: flex;
+    font-size: 50px; font-weight: bold; width:45%; align-items: center;
+    color: #333; background-color: white; cursor: pointer;}
+
+.banner2 .box .info-box>i{color: #13ADE5; font-size: 200px; }
+.banner2 .box .info-box>span{margin-left: auto; padding-right: 50px;}
+
+/* 세번째 섹션====================================== */
+.banner3{ color: #13ADE5; flex-wrap: nowrap;  }
+.banner3>div{width: 33.33%;margin: 20px; }
+.banner3-1>i{font-size: 50px;}
+.banner3 >div{position: relative; cursor: pointer;}
+.banner3 ul{position: absolute; z-index: 1; top: 60px; left: 45px; display: inline-block; padding: 30px 10px;}
+.banner3 ul li{color: #333; font-size: 30px; padding: 14px 0;}
+.banner3-1 li:nth-child(1){font-weight: bold;}
+
+.banner3-1 ul li i{padding-right: 10px; font-size: 24px;}
+.banner3-1 ul li:nth-child(1){margin-bottom: 30px;}
+.banner3-1 ul li:nth-child(1) i{padding-right: 30px; font-size: 40px;}
+
+/* 네번째 섹션========================================= */
+.banner4{padding: 150px 0;}
+
+.video-wrap { position: relative; width: 100%; padding-top: 56.25%;}
+
+.video-wrap iframe { position: absolute; top: 0;left: 0; width: 100%;
+                    height: 100%; border: 0;}
+
+/* =======================================미디어 쿼리================================= */
+
+
+
+/* 노트북  */
+@media(max-width:1450px){
+.banner3 ul li{ font-size: 20px;}
+.banner3-1 ul li i{ font-size: 18px;}
+.banner3-1 ul li:nth-child(1) {font-size: 26px;}
+.banner3-1 ul li:nth-child(1) i{font-size: 40px;}
+}
+
+@media(max-width:1200px){
+.banner3 ul{top:40px;}
+.banner3 ul li{ font-size: 20px;}
+.banner3-1 ul li:nth-child(1) {font-size: 26px;margin-bottom: 10px;}
+.banner3-1 ul li:nth-child(1) i{font-size: 40px;}
+
+}
+
+@media(max-width:1100px){
+.banner3 ul li{ font-size: 16px;}
+.banner3-1 ul li:nth-child(1) {font-size: 20px;}
+.banner3-1 ul li:nth-child(1) i{font-size: 20px;}
+
+}
+
+
+/* 테블릿  */
+@media(max-width:991px){
+
+
+
+
+.banner1{height: 542px; background-color: red;}
+.swiper{height: 542px;}
+.swiper-slide img{height: 542px;}
+
+.campus-buttons {width: 80%;   height: 25px;
+     bottom: 100px; left: 10%; justify-content: center; }
+.banner1-1{width: 250px;}
+.phone-img{display: none;}
+
+
+
+.btn-blue {background-color: #13ADE5;
+        border: 2px solid white;        
+        color: white;
+        box-shadow: 0 0 0 4px #13ADE5;
+        margin-right: 60px;}
+
+.btn-white {background-color: #fff;
+        border: 2px solid #13ADE5;        
+        color: #13ADE5; 
+        box-shadow: 0 0 0 4px white; }
+
+.main-img{display: block; height: 542px;}
+
+
+
+
+
+/* 두번째 섹션=============================== */
+.banner2 {padding: 100px 0; justify-content: space-between; gap: 0;}
+
+.box { justify-content: center  }
+
+.info-box { border: 10px solid #13ADE5; border-radius: 60px; 
+    font-size: 30px; font-weight: bold;   height: 240px; width: 260px; 
+    flex-direction: column; align-items: center; justify-content: center; 
+    color: #333; background-color: white;}
+
+.banner2 .box .info-box>i{color: #13ADE5; font-size: 60px; }
+.banner2 .box .info-box>span{color: #333; padding-right: 0px; margin-left: 0px;margin-top: 20px;}
+
+
+/* 세번째 섹션====================================== */
+.banner3{padding: 0 30px; max-width: 991px; width: 100%;}
+.banner3>div{margin: 10px;}
+.banner3-1>i{font-size: 0px;}
+
+.banner3 ul{ top: 20px; left: 30px;  padding: 15px 0px;}
+.banner3 ul li{ font-size: 14px; padding: 5px 0;}
+
+.banner3-1 ul li i{padding-right: 10px; font-size: 10px; }
+.banner3-1 ul li:nth-child(1){margin-top: 10px; margin-bottom: 20px; font-size: 24px;font-size: 20px;}
+.banner3-1 ul li:nth-child(1) i{padding-right: 10px;font-size: 24px;}
+
+}
+
+
+
+
+
+
+
+@media(max-width:767px){
+.main-img{display: none;}
+.phone-img{display: block; width: 767px; max-width: 100%; margin: 0 auto;}
+
+header{height: 70px;}
+
+
+
+
+
+.banner1{height: 100vh;}
+.swiper{height: 100vh; }
+.swiper-slide img{height:100vh; width: 100vw; }
+
+.banner1-1{width: 300px; height:220px ; top: 200px;}
+
+.banner1  .btn{width: 150px; font-size: 20px; text-align: center; padding: 5px 0;}
+.campus-buttons{flex-wrap: nowrap; height: 45px;}
+.btn-blue{margin-right: 40px;}
+
+
+.swiper-button-next{display: none;}
+.swiper-button-prev{display: none;}
+
+.banner2{padding-top: 20px;}
+.box{justify-content: space-between;  padding: 50px 40px; flex-wrap: wrap;}
+
+.info-box{width: 100%; flex-wrap: nowrap; flex-direction: row; align-items: center; height: auto; 
+        padding: 30px 20px; font-size: 26px;}
+.banner2 .box .info-box>span{width: 70%;margin-top:0; padding-left: 50px; font-size: 22px;}
+.banner2 .box .info-box>i{width: 30%; font-size: 90px;}
+
+.banner3{padding: 0px; width: 100%;}
+.banner3.flex-box{flex-wrap: wrap;}
+.banner3>div{width: 80%; margin: 20px auto; }
+header .logo{width: 200px;}
+.banner3 ul{ top: 40px; left: 40px; padding: 20px 0px;}
+.banner3 ul li{font-size: 20px; padding-left: 10px;}
+.banner3-1 ul li i{font-size: 10px; }
+.banner3-1 ul li:nth-child(1){ font-size: 28px; padding: 10px 0px;}
+.banner3-1 ul li:nth-child(1) i{font-size: 48px;}
+
+
+.txt{padding-left: 0; padding-right: 0; text-align: center; width: 100%; border-bottom: solid 1px #13ADE5;}
+.txt li{font-size: 18px; padding: 0 4px;}
+.txt-1{text-align: center; margin-top: 20px; margin-bottom: 0px; padding: 0px 0px;}
+.txt-1 a{padding-top: 20px; font-size: 13px;}
+.sns ul li{padding: 10px 20px;}
+.sns ul li img{height: 34px;}
+}
+
+
+
+
+@media(max-width:400px){
+.banner3 ul{ top: 20px; left: 26px; padding: 20px 0px;}
+.banner3 ul li{font-size: 20px;}
+.banner3-1 ul li i{font-size: 10px; }
+.banner3-1 ul li:nth-child(1){ font-size: 24px; padding: 10px 0px;}
+.banner3-1 ul li:nth-child(1) i{font-size: 38px;}
+
+}
+
+
+</style>
+</head>
+<body>
+ <div class="intro"> 
+    <div class="intro-wrap">
+        <div class="close"><i class="fa-solid fa-xmark"></i></div>
+        <img src="img/dan-do.png" alt="">
+    </div>
+</div>
+
+<header>
+    <nav class="flex-box">
+        <div class="logo">
+            <a href="index.html"><img src="img/logo.png" alt=""></a>
+        </div>
+
+        <ul class="menu">
+            <li id="menu-1"><a href="#">대학 소개</a></li>
+            <li id="menu-2"><a href="#">입학 안내</a></li>
+            <li><a href="#">대학 생활</a></li>
+            <li><a href="#">커뮤니티</a></li>
+        </ul>
+        <div class="login">
+            <a href="#">로그인</a>
+            <a href="#">회원가입</a>
+        </div>
+
+<!-- 햄버거 버튼 -->
+<div id="bt">
+    <i class="fa-solid fa-bars"></i>
+</div>
+<!-- 햄버거 버튼 -->
+
+<!-- 모바일 메뉴 -->
+<div id="bt1">
+    <div class="campus-btn flex-box">
+        <a href="#" class="btn btn-blue">죽전 캠퍼스</a>
+        <a href="#" class="btn btn-white">천안 캠퍼스</a>
+    </div>
+    <ul>
+        <li><i class="fa-solid fa-stop"></i><a href="dan.html">대학 소개</a></li>
+        <li><i class="fa-solid fa-stop"></i><a href="susi.html">입학 안내</a></li>
+        <li><i class="fa-solid fa-stop"></i><a href="#">대학 생활</a></li>
+        <li><i class="fa-solid fa-stop"></i><a href="map.html">찾아오는 길</a></li>
+    <p><span>로그인</span> <span>회원가입</span></p>
+    <img src="img/menu-ani.png" alt="">
+    </ul>
+
+</div>   
+</nav>
+</header>
+
+<!-- pc 서브메뉴 묶음  -->
+<!-- 대학소개 하부메뉴  -->
+     <div id="submenu-1">
+        <ul class="submenu">
+            <li><a href="dan.html">단국의 비전</a></li>
+            <li><a href="#">총장 소개</a></li>
+            <li><a href="#">역대 총 학장</a></li>
+            <li><a href="map.html">찾아오는 길</a></li>
+        </ul>
+    </div>
+<!-- 대학생활 하부메뉴  -->
+     <div id="submenu-2">
+        <ul class="submenu">
+            <li><a href="susi.html">수시 모집</a></li>
+            <li><a href="#">정시 모집</a></li>
+            <li><a href="#">입시도우미</a></li>
+            <li><a href="#">대학안내</a></li>
+        </ul>
+    </div>
+
+
+
+<section class="banner1">
+       <div class="banner1-txt">
+                <div class="banner1-1"><img src="img/txt1.png" alt=""> </div>
+                <div class="campus-buttons flex-box">
+                    <a href="#" class="btn btn-blue">죽전 캠퍼스</a>
+                    <a href="#" class="btn btn-white">천안 캠퍼스</a>
+                </div>
+        </div>        
+
+<!-- 이미지 슬라이드  -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"> 
+                    <div>
+                        
+                        <img src="img/1page1-1.png" alt="" class="main-img">
+                        <img src="img/1page1-1phone.png" alt="" class="phone-img">
+                    </div>
+                </div>
+                <div class="swiper-slide"> 
+                    <div>
+                        <img src="img/1page1-2.png" alt="" class="main-img">
+                        <img src="img/1page1-2phone.png" alt="" class="phone-img">
+                    </div>
+                </div>
+                <div class="swiper-slide"> 
+                   <div>
+                        <img src="img/1page1-3.png" alt="" class="main-img">
+                        <img src="img/1page1-3phone.png" alt="" class="phone-img">
+                   </div>
+                </div>
+                <div class="swiper-slide"> 
+                    <div>
+                        <img src="img/1page1-4.png" alt="" class="main-img">
+                        <img src="img/1page1-4phone.png" alt="" class="phone-img">
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+
+
+</section>
+
+
+<section class="banner2 container">
+  <div class="box">
+        <div class="info-box" onclick="window.open('http://gurwo00.dothome.co.kr/susi.html')">
+            <i class="fa-solid fa-graduation-cap"></i><span>입학 안내</span>
+        </div>
+
+        <div class="info-box">
+            <i class="fa-solid fa-file"></i><span>장학금제도</span>
+        </div>
+  </div>
+</section>
+
+<section class="banner3 container flex-box">
+    <div class="banner3-1">
+        <ul>
+            
+                    <li><i class="fa-solid fa-bullhorn" style="color: #13ADE5;"></i>공지사항</li>
+                    <li><i class="fa-solid fa-circle"></i>수강신청 안내</li>
+                    <li><i class="fa-solid fa-circle"></i>도서관 점검 공지</li>
+                    <li><i class="fa-solid fa-circle"></i>계절학기 신청</li>
+        </ul>
+        <img src="img/banner3.png" alt="">
+    </div>
+    
+    <div class="banner3-1">
+                
+        <ul>
+                    <li><i class="fa-solid fa-file" style="color: #13ADE5;"></i>장학공지</li>
+                    <li><i class="fa-solid fa-circle" ></i>국가 장학금 신청</li>
+                    <li><i class="fa-solid fa-circle" ></i>면학장학 서류제출</li>
+                    <li><i class="fa-solid fa-circle" ></i>외부장학 모집</li>
+        </ul>
+        <img src="img/banner3.png" alt="">
+    </div>
+
+    <div class="banner3-1">
+        
+        <ul>
+            <li><i class="fa-solid fa-graduation-cap" style="color: #13ADE5;"></i>학사일정</li>
+            <li><i class="fa-solid fa-circle" ></i>2025/08/26 개강</li>
+            <li><i class="fa-solid fa-circle" ></i>2025/09/02 수강정정</li>
+            <li><i class="fa-solid fa-circle" ></i>2025/10/21 중간고사</li>
+        </ul>
+        <img src="img/banner3.png" alt="">
+    </div>
+</section>
+
+
+<section class="banner4 container">
+<div class="video-wrap">
+  <iframe
+    src="https://www.youtube.com/embed/hCK2mgWv9pQ"
+    title="단국, 내일 - 단국대학교 (Cinema Ver.)"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+</div>
+</section>
+
+<footer >
+    <div class=" flex-box">
+        <!-- 왼쪽  -->
+        <div> <img src="img/footer.logo.png" alt=""></div>
+    
+        <!-- 오른쪽  -->
+        <div>
+                <ul class="txt">
+                    <li>개인정보처리방침</li>
+                    <li>이메일 무단수집 거부</li>
+                    <li>대학정보공시</li>
+                    <li>캠퍼스 맵</li>
+                    <li>단국대학교 앱</li>   
+                </ul>
+                <div class="sns">
+                    <ul class="flex-box pc">
+                        <li><img src="img/footer.sns-1.png" alt=""></li>
+                        <li><img src="img/footer.sns-2.png" alt=""></li>
+                        <li><img src="img/footer.sns-3.png" alt=""></li>
+                        <li><img src="img/footer.sns-4.png" alt=""></li>
+                        <li><img src="img/footer.sns-5.png" alt=""></li>
+                        <li><img src="img/footer.sns-6.png" alt=""></li>
+                        <li><img src="img/footer.sns-7.png" alt=""></li>
+                        <li><img src="img/footer.sns-8.png" alt=""></li>
+                    </ul>
+                    <nav class="txt-1">
+                            <a href="#">죽전캠퍼스 경기도 용인시 수지구 죽전로 152 (우)16890 /<span></span> 죽전캠퍼스 031.8005.2550~3  <br>
+                                천안캠퍼스 충청남도 천안시 동남구 단대로 119 (우)31116 /<span></span> 천안 캠퍼스 041.550.1234~6
+                            </a> </nav>
+                
+                    <ul class="flex-box mo">                        
+                       
+                        <li><img src="img/footer.sns-1.png" alt=""></li>
+                        <li><img src="img/footer.sns-2.png" alt=""></li>
+                        <li><img src="img/footer.sns-3.png" alt=""></li>
+                        <li><img src="img/footer.sns-4.png" alt=""></li>
+                    </ul>
+                
+                </div>
+        </div>
+    </div>
+</footer>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/common.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+        autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+    $(function(){
+    $('.close').click(
+        function(){
+            $('.intro').hide();
+        }
+    )
+
+});
+  </script>
+
+
+</body>
+</html>
