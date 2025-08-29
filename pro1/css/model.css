@@ -1,0 +1,52 @@
+
+
+
+.sec1 h2{font-size: 50px; text-align: center; margin-top: 150px; margin-bottom: 200px;}
+.sec1 ul{text-align: center;}
+.sec1 ul li{color:#000; cursor: pointer; color:#000;display: inline; padding:0 50px; font-size: 30px;transition: all 0.5s; }
+.sec1 ul li:hover{color: #fff; background-color: #000; }   
+
+.sec1 ul li.sec1-bt{color: #fff; background-color: #000;}
+.conv{display: none;}
+
+
+
+.sec1 .flex-box{ margin-top: 50px;justify-content: space-between; }
+.sec1 .flex-box>div{width: 50%;}
+/* .sec1 .flex-box>div img{width: 70%; margin: auto; } */
+
+
+
+
+
+
+
+
+
+/* ====================================미디어쿼리================================= */
+
+/* 테블릿 */
+@media(max-width:991px){
+
+.sec1 h2{font-size: 30px;margin-bottom: 100px;}
+.sec1 ul li{font-size: 20px;}
+.sec1 ul li:hover{background-color: #fff; color: #000; }
+.sec1 ul li.sec1-bt{color: #000; background-color: #fff;}
+
+}
+
+
+/* 폰 */
+@media(max-width:767px){
+
+.sec1 h2{font-size: 20px;margin-bottom: 80px;}
+.sec1 ul li{font-size: 15px; padding: 0 20px;}
+
+.sec1 .flex-box>div{width: 100%;}
+
+
+
+
+
+
+}

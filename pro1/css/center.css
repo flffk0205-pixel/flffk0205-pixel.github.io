@@ -1,0 +1,165 @@
+
+
+
+header {color: #fff; opacity: 1; background-color: rgba(0,0,0,1); border-top: solid 1px #000;border-bottom: solid 1px #000;}
+header nav ul li a{color:#fff; transition: all 0.5s;}
+header nav ul li{display: inline; padding:0 80px;}
+header span{display: inline; font-size: 35px; padding: 0 0 5px 90px;}
+header nav{justify-content: flex-start;}
+
+.txt-1{font-size: 80px;text-align: center; margin-top: 50px;}
+
+.flex-box.sec3>div{width: 50%;}
+.container.txt-1{font-size: 40px; margin-top: 150px;}
+
+.btbox ul{justify-content: center; margin: 100px 0;}
+
+.btbox ul li{width: 200px; padding: 20px 0; text-align: center; background-color: #fff;
+color: #000; margin: 100px; font-size: 20px; transition: all 0.5s;
+border: solid 1px;}
+.btbox ul li:hover{cursor: pointer; background-color: #000; color: #fff; }
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100vh;
+  background-color: rgba(0,0,0,0.8);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 가운데 박스 */
+.modal-content {
+width: 1000px;
+height: 70vh;
+background-color: #fff;
+color: #000;
+padding: 30px;
+position: relative;
+overflow-y: auto;
+box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+left: 50%; top: 50%; transform: translate(-50%,-50%);
+}
+
+/* 닫기 버튼 */
+.modal-close {
+cursor: pointer;
+text-align: center; 
+width: 200px; margin: auto;
+font-size: 20px; padding: 20px 0;
+color: #fff;
+background: #000}
+
+.modal .modal-content{overflow-y: auto;}
+.modal .modal-content>div{border-bottom: solid 1px #000; margin-top: 50px;}
+.modal .flex-box{justify-content: space-between;} 
+
+.modal h2{font-size: 20px; font-weight: normal; cursor: pointer;}
+.modal p:hover{cursor: pointer; color: gray;}
+.modal { width: 100%; text-align: right;}
+
+
+.modal-ul{display: none;}
+.rotate{transform: rotate(180deg);}
+
+
+/* 자동차 모델 */
+.modal-ul>.flex-box{justify-content: flex-start;}
+.modal-ul>ul{justify-content: flex-start; align-items: self-start;}
+.modal-ul>ul>li{width: 25%;}
+
+/* 기타 옵션 내용  */
+.modal-ul>li{font-size: 20px; padding: 10px 10px;}
+.modal-ul>li:hover{color: gray; cursor: pointer;}
+
+
+/* 두번째 모달창 구역 */
+
+.mod{  display: none; position: fixed; top: 0; left: 0; 
+
+width: 100%; height: 100vh; background-color: rgba(0,0,0,0.8);
+z-index: 9999; justify-content: center; align-items: center;}
+
+/* 가운데 박스 */
+.mod-content { max-width: 1000px; height: 80vh;
+background-color: #fff; color: #000; padding: 40px;
+position: relative; 
+box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+left: 50%; top: 50%; transform: translate(-50%,-50%);}
+
+/* 닫기 버튼 */
+.mod-close { cursor: pointer; text-align: center; 
+width: 200px; margin: auto; font-size: 20px; 
+padding: 20px 0; color: #fff; background: #000}
+
+
+.input-row {  align-items: center; margin-bottom: 30px;  
+    justify-content: space-between; }
+.input-row label{font-size: 20px; width: 20%;text-align: center; padding-right: 20px;font-size: 30px;}
+.input-row>input{ width: 70%;  padding: 20px 10px; border: solid 1px #000;}  
+
+.input-row>div{width: 70%;justify-content: space-between; }
+.input-row>div>input{padding: 20px 10px; border: solid 1px #000; width: 30%; }
+
+.mod ul{text-align: left; color: gray; margin-top:190px; padding: 40px 0;}
+
+.md-1{margin-top: 140px;}
+
+
+
+
+/* ==================미디어쿼리========================== */
+
+@media(max-width:1400px){
+    .sec3{padding-left: 50px;}
+    header nav ul li{padding: 0 20px;}
+    header nav ul{margin-left: 50px;}
+  
+}
+
+
+
+
+/* 테블릿  */
+@media(max-width:991px){
+
+header span{display: inline; font-size: 35px; margin-top: -50px;}
+.modal-content {width: 700px;}
+.mod-content{width: 700px;}
+.input-row label{ width: 20%;text-align: center; padding-right: 20px;font-size: 20px;}
+
+}
+
+
+/* 폰  */
+@media(max-width:767px){
+header span{display: none}
+.modal-content {width: 300px;}
+.mod-content{width: 700px;}
+.input-row label{ width: 30%;text-align: center; padding-right: 20px; font-size: 15px;}
+h2{font-size: 25px;}
+
+.modal-ul>li{font-size: 10px; padding: 10px 10px;}
+.modal-ul>li:hover{color: black; cursor: pointer;}
+.modal h2{font-size: 10px; font-weight: normal; cursor: pointer;}
+
+.mod-content{width: 300px; height: 50vh;}
+.mod ul{display: none;}
+.input-row>input{ width: 70%;  padding: 5px 5px; border: solid 1px #000;}  
+.input-row>div>input{padding: 5px 5px; border: solid 1px #000; width: 30%; }
+.con{display: none;}
+.con-1{font-size: 14px;}
+.modal-ul li{text-align: center;}
+.mod-close { cursor: pointer; text-align: center; 
+width: 100px; margin: auto; font-size: 10px; 
+padding: 10px 0; color: #fff; background: #000}
+
+.modal-close { cursor: pointer; text-align: center; 
+width: 100px; margin: auto; font-size: 10px; 
+padding: 10px 0; color: #fff; background: #000}
+.modal-ul>ul>li{width: 50%;}
+
+.sec3{padding-left: 30px;}
+}

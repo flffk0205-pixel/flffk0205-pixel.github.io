@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{padding: 0; margin: 0; list-style: none; text-decoration: none; box-sizing: border-box;}
+body{ font-family: "Noto Sans","Noto Sans KR", sans-serif;}
+
+img{width: 100%; display: block;}
+.flex-box{display: flex; flex-wrap: wrap;}
+
+.container{max-width: 1400px; margin: auto; padding: 0 20px; }
+header{background-color: rgba(0,0,0,0.7); padding: 20px; opacity: 0; transition: all 0.5s;
+    position: fixed; left:0; top:0; width: 100%; z-index: 1000; border-top: solid 1px #fff;border-bottom: solid 1px #fff;}
+
+header nav{display: flex; margin: auto; max-width: 1400px;
+justify-content: space-between; align-items: center;}
+
+header nav ul li{display: inline; padding:0 120px;}
+header nav ul li a{color:#fff;}
+header nav ul li a:hover{color:#fff; border-bottom: solid 1px #fff;}
+
+#bt1{display: none;}
+#bt{display: none;}
+
+/* 푸터구역========================= */
+footer{background-color: white; padding: 20px; color: black;}
+footer .flex-box>ul{width: 25%; padding: 10px;}
+footer .flex-box>ul li:nth-child(1){font-weight: bold; font-size: 20px; border-bottom: gray solid 1px;
+                            }
+footer .flex-box>ul li{padding: 10px 0;}
+footer .flex-box>ul li:hover{color: rgb(63, 63, 255); cursor: pointer;}
+footer .flex-box>ul .f-1:hover{color: black;}
+footer .flex-box>ul .f-2:hover{color: black;}
+footer .flex-box>ul .f-3:hover{color: black;}
+footer .flex-box>ul .f-4:hover{color: black;}
+footer p{cursor: auto; margin-top: 20px; border-top: solid 1px gray; padding: 10px 0;}
+footer p a{color:#000; padding: 0 10px;}
+footer p br{display: none;}
+
+
+
+
+/* ==================미디어쿼리========================== */
+
+
+/* 테블릿  */
+
+@media(max-width:1200px){
+header nav ul li{padding: 0 50px;}
+
+}
+
+
+@media(max-width:991px){
+
+
+
+
+
+
+
+
+
+    header{background-color: rgba(0,0,0,0.8);}
+    header nav{flex-direction: column; align-items: flex-start;}
+    header nav ul{text-align: center; width: 100%; display: none;}
+
+    header nav ul li{display: block;}
+    header nav .logo img{width: 50px;}
+    #bt{display: block; position: fixed; right:20px; top:20px; z-index: 1000;}
+
+    img{width: 100%;}
+    
+    #bt1 {position: fixed; top: 0; right: -70%; width: 70%; transition: all 0.5s; display: block;
+    height: 100vh;z-index: 900; text-align: center; background-color: #000; color: white;}
+
+    #bt1.bt1_show{right:0%;}
+    #bt1 ul{margin-top: 170px; width: 70%;  margin-left: 15%;}
+    #bt1 ul li{ font-size: 30px;border-bottom: solid 3px white; padding: 40px 0;text-align: left;
+    padding-left: 30px;}  
+    #bt1 p{font-size: 30px; position: absolute; bottom: 50px; width: 100%; text-align: center;}
+    #bt1 i{font-size: 50px;margin-left: 20px;}
+    #bt1 ul li a{color: #fff;}
+
+
+    footer .flex-box>ul{width: 50%;}
+
+footer .flex-box>ul li:hover{color: #000;}
+
+}
+
+/* 폰  */
+@media(max-width:767px){
+header{padding: 10px 20px;}
+header nav ul li{display: block;}
+header nav .logo img{width: 30px;}
+#bt{display: block; position: fixed; right:50px; top:0px; z-index: 1000;}
+ #bt1 i{font-size: 30px;margin-left: 20px;}
+
+
+footer .flex-box>ul{width: 100%;} 
+
+footer .flex-box{font-size: 16px;}
+footer ul:nth-child(1){display: none;}
+footer ul:nth-child(2){display: none;}
+footer ul:nth-child(3){display: none;}
+footer p{text-align: center; }
+footer p br{display: block; }
+footer p a{padding: 0;  padding-top: 10px;display: inline-block;text-align: center; }
+
+svg{width: 40px; height: 40px; margin-top: 7px; margin-right: -140px;}
+
+
+
+#bt1.bt1_show{right:0%;}
+
+#bt1 ul{margin-top: 130px; width: 60%;  margin-left: 20%;}
+
+#bt1 ul li{ font-size: 20px;border-bottom: solid 3px white; padding: 40px 0;text-align: left;
+}  
+
+#bt1 p{font-size: 15px; position: absolute; bottom: 30px; width: 100%; text-align: center;}
+
+
+
+}
