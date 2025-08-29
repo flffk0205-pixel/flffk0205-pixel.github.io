@@ -1,0 +1,165 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+* { padding: 0; margin: 0; list-style: none; text-decoration: none; box-sizing: border-box;}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;}
+img {width: 100%; display: block;}
+.flex-box{display: flex; flex-wrap: wrap;}
+.container{margin: auto; max-width: 1400px;}
+
+header {background-color: white; position: fixed; left: 0; top: 0; width: 100%; z-index: 1000;}
+
+header nav {max-width: 1860px ; margin: auto; justify-content: space-between;align-items: center; }     
+header nav ul li {display: inline-block; padding: 0 90px; position: relative;}
+header nav ul li a{font-size: 28px; color: #13ADE5; font-weight: 520;}
+header nav ul li a:hover{border-bottom: 1px solid #13ADE5;}
+
+#submenu-1, #submenu-2{  display:none; position:absolute; z-index:10; width: 100%; left: 0; top:85px; height: 50px;background-color: #13ADE5;  }
+.submenu{display: flex; justify-content: center;
+           align-items: center; 
+        }
+
+.submenu>li{ transition:all 0.9s; padding: 10px 150px; }
+.submenu a{color: #fff; display: inline-block; font-size: 20px;}
+.submenu a:hover{border-bottom: 1px solid #fff;}
+
+ #bt{display: none;}
+#bt1{display: none;} 
+/*  #bt1 .btn{display: none;}  */
+.login a{color: #13ADE5; display: inline-block; padding: 0 10px; font-size: 20px;}
+
+/* 푸터 pc 구역============================================================================= */
+
+footer{padding-bottom: 20px;}
+footer .flex-box>div:nth-child(1){width: 30%;}
+footer .flex-box>div:nth-child(1) img{width: 60%; margin: auto;}
+footer .flex-box>div:nth-child(2){width: 70%;}
+
+footer .flex-box{margin: auto; width: calc(100% - 40px); padding: 40px 20px; padding-right: 40px;  border-radius: 40px;
+                background-color: #13ADE5; display: flex;  color: #fff;}
+footer .flex-box .txt img{width: 250px;}
+footer .mo{display: none;}
+
+.sns ul{ justify-content: center; align-items: center; text-decoration: none; }    
+.sns ul li{padding: 30px 20px ;}
+.sns ul li img{width: auto; height: 28px; text-align: right;}
+
+.txt li{color: #fff; font-size: 30px; display: inline-block; padding: 0 20px;}
+.txt-1{text-align: right; padding: 0 90px;}
+.txt-1 a{color: #fff; font-size: 15px;}
+.txt{border-bottom: solid 1px #fff; padding-bottom: 30px; padding-right: 40px; padding-top: 30px;}
+/* 푸터 pc 구역============================================================================= */
+
+
+
+/* 테블릿 구역====================================================== */
+
+@media(max-width: 991px){
+    header nav {max-width: 991px;}     
+header nav ul li {display: none; }
+header .logo{width: 230px;}
+.login a{display: none;}
+
+#bt{display: block; font-size: 40px; padding: 10px; color: #13ADE5; position: fixed; right: 20px; top:-5px; z-index: 100;}
+#bt1{ background-color: #13ADE5; width: 100%; text-align: center;
+    position: absolute; z-index: 10;  left: 0; top: 70px;height: 100vh;}
+#bt1 ul{margin-top: 50px;}
+#bt1 ul li {color: #fff; display: block; padding: 20px 0; justify-content: space-between;}
+#bt1 ul img{ width: 250px;  display: block; margin-left: 500px; padding: 10px 10px ;}
+#bt1 ul li a{color: #fff; font-size: 30px;}
+#bt1 ul li>i{margin-right: 40px; font-size: 30px;}
+#bt1 .btn-blue, #bt1 .btn-white{box-shadow: none;}
+#bt1 .btn{  border: 1px solid #fff; border-radius: 30px;
+     padding: 10px 40px; font-size: 20px; }
+#bt1 .btn-white{background-color: #13ADE5; color: #fff;}
+#bt1 ul p{color: #fff; font-size: 28px; border-top: 1px solid #fff;
+        display: inline-block; padding-top: 20px; margin-bottom: 30px;}
+#bt1 span{margin: 50px; }
+#bt1 .campus-btn{justify-content: center; margin-top: 50px;}
+nav ul {
+       
+        width: 100%;
+     
+        text-align: center;
+    }
+    nav ul li {
+        display: block;
+        padding: 10px 0;
+    }
+
+    .btn-blue {        
+        background-color: #13ADE5;
+        border: 2px solid white;        
+        color: white;
+        box-shadow: 0 0 0 15px #13ADE5;
+        margin-right: 60px;
+        }
+
+    .btn-white {
+        background-color: #fff;             
+        border: 2px solid #13ADE5;        
+        color: #13ADE5; 
+        box-shadow: 0 0 0 15px white; 
+        }
+
+.footer-box{max-width: 991px;}
+footer .flex-box>div:nth-child(1) {width: 100%;}
+footer .flex-box>div:nth-child(1) img{width: 20%;}
+footer .pc{display: none;}
+footer .mo{display: flex;}  /* flex로 자식을 쪼개어 놓으면 display : flex로 해주어야 함 */
+footer .flex-box>div:nth-child(2){width: 100%;}
+footer span{display: block;}
+.txt{padding-left: 0; padding-right: 0; text-align: center; width: 100%; border-bottom: solid 1px #13ADE5;}
+.txt li{font-size: 16px; padding: 0 10px;}
+.txt-1{text-align: center; margin-top: 20px;}
+
+footer .flex-box{padding: 0px 30px;}
+}
+
+
+
+
+
+
+
+
+/* 핸드폰========================================== */
+@media(max-width:767px){
+
+footer{padding: 0 0 0 0;}
+footer .flex-box{padding: 30px 10px; width: calc(100%); border-radius: 40px 40px 0px 0px;}
+footer .flex-box>div:nth-child(1) {width: 100%;}
+footer .flex-box>div:nth-child(1) img{width: 60%;}
+footer .pc{display: none;}
+footer .mo{display: flex;}  /* flex로 자식을 쪼개어 놓으면 display : flex로 해주어야 함 */
+footer .flex-box>div:nth-child(2){width: 100%;}
+footer span{display: block;}
+header .logo{width: 200px;}
+
+
+#bt1 ul img{width: 50px; margin-left: 150px;}
+#bt{ font-size: 40px; padding: 10px; display: block;}
+#bt1{  width: 100%; height: 100vh;  top:70px;}
+
+#bt1 ul li { padding: 20px 0;  }
+#bt1 ul img{ width: 250px;    padding: 10px 10px; margin-left: 190px;}
+#bt1 ul li a{ font-size: 30px;}
+#bt1 ul li>i{ font-size: 20px; margin-right: 20px;}
+#bt1 .btn{padding: 10px 20px; font-size: 20px;}
+#bt1 ul p{font-size: 25px; padding-top: 30px; margin-bottom: 30px}
+#bt1 span{margin: 25px;}
+#bt1 .campus-buttons {height: 50px; left: 50%;  width: auto; display: none;}
+.txt{padding-left: 0; padding-right: 0; text-align: center; width: 100%; border-bottom: solid 1px #13ADE5;}
+.txt li{font-size: 18px; padding: 0 4px;}
+.txt-1{text-align: center; margin-top: 20px; margin-bottom: 0px; padding: 0px 0px;}
+.txt-1 a{padding-top: 20px; font-size: 13px;}
+.sns ul li{padding: 10px 20px;}
+.sns ul li img{height: 34px;}
+header{height: 70px;}
+
+#bt1 .campus-btn {height: 50px; left: 50%;  top: 50px; 
+    padding: 0px 0; display: inline-block}
+
+}
+
