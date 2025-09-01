@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="img/pavicon.png" type="img/png" sizes="67*67">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script src="https://kit.fontawesome.com/f765e4def9.js" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<title>조혁재의 포토폴리오</title>
+<style>
+* { padding: 0; margin: 0; list-style: none; text-decoration: none; box-sizing: border-box;}
+body {  font-family: "Noto Serif",  "Noto Serif KR", serif;
+  font-optical-sizing: auto; background-color: #E6E6E6;}
+  
+img {width: 100%; display: block;}
+.flex-box{display: flex; flex-wrap: wrap;}
+.container{margin: auto; max-width: 1400px; padding: 30px;}
+section{height: 100vh;}
+
+
+/* intro ============================  */
+.intro{position: relative;width: 100%; left: 0;}
+.intro-img {width: 540px; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);}
+
+
+
+/* pro=========================   */
+.pro {position: relative; }
+
+.frame-right, .frame-left{width: 300px; position: absolute; z-index: -1;}
+.frame-left{top: 70px; left: 130px;}
+.frame-right{bottom: 70px; right: 130px;}
+
+
+    .txt{ padding-top: 100px; color: #8F8D8D;}
+
+
+    .pro-1{font-size: 26px; font-weight: 900; padding-top: 140px;}
+    .pro h2{font-weight: 900;}
+    .pro .container{position: relative;  height: 100vh; }
+    .pro-1 span{color: #005444;}
+    .pro-1 p{font-size: 20px; font-weight: 900; padding: 50px 0;}
+    
+    .photo{width: 350px; bottom: 140px; position: absolute; right: 0px;}
+
+    .design-pro,   .design-web{ position: relative;}
+    .design-pro .flex-box>div{width: 16%;padding: 10px;}
+    .design-web .flex-box>div{width: 16%;padding: 10px;}
+   
+
+    .web{margin-top: 140px; cursor: pointer;}
+    .web h2{color: #005444; font-size: 36px; font-weight: 900; }
+    .web p{text-align: center; color: #005444; font-weight: 800; padding: 20px;}
+
+    .web-1{ margin-top: 140px; cursor: pointer;}
+    .web-1 h2{color: #005444; font-size: 36px; font-weight: 900; }
+    .web-1 p{text-align: center; color: #005444; font-weight: 800; padding: 20px;}
+
+
+
+/* 모달 구역  ============================  */
+.modal {
+    display: none;  
+    
+    position: fixed;
+    left: 0;
+    top: 0;    
+  
+    overflow-y: auto;
+    
+    width: 100%;
+    height: 100%;   
+
+    background-color: rgba(0,0,0,0.8);
+
+    z-index: 900; /* z-index는 반드시 들어가야 한다 */ }
+
+
+.modal-wrap {
+
+    position: absolute;
+    left: 0;/* 항상 수평 영역의 중앙에 위치하도록 설정 */
+    top: 0px;
+  
+    display: block;
+    
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom:100px;   
+   
+}
+
+.page{color: #005444; font-size: 50px; font-weight: 700; padding: 90px;
+    cursor: pointer;}
+
+.modal-body{ position: relative;    padding: 50px 0;  border-radius: 30px; 
+     width:80%; margin: auto; text-align: center;  background-color: #fff;} 
+.modal img{max-width:860px ;margin: auto; } 
+.pc-modal img{max-width:1400px; } 
+
+.modal .close{position: absolute; right:40px; top: 30px; z-index: 150; font-size: 50px; cursor: pointer;}
+.modal h3{font-size: 50px; color: #005444; padding: 50px 0; font-weight: 700; }
+.modal-body p{font-size: 18px; font-weight: 500;margin-bottom: 50px;}
+
+
+@media (max-width:1700px){
+
+.frame-left{top: 30px; left: 30px;}
+.frame-right{bottom: 30px; right: 30px;}
+.container{padding: 60px;}
+.photo{right: 80px;}
+
+
+
+
+}
+
+@media (max-width:1400px){
+
+    .modal-body p{font-size: 14px; text-align: left;}
+    .container{padding: 0px 40px;}
+    .frame-right, .frame-left{display: none;}
+    .photo{padding: 0px 40px; bottom: 40px;}
+    .design-pro .flex-box>div {width: 25%;}
+        .design-web .flex-box>div{width: 25%;}
+        .intro-img{width: 40%;  margin: auto;}
+    .web-1 p{text-align: center; color: #005444; font-weight: 800; padding: 0px;}
+    .web p{text-align: center; color: #005444; font-weight: 800; padding: 0px;}
+
+        .web-1 h2{color: #005444; font-size: 36px; font-weight: 900; 
+            text-align: center; padding: 50px;}
+
+        .web h2{color: #005444; font-size: 36px; font-weight: 900; margin-top: 0px; 
+            text-align: center; padding: 50px;}
+
+    .page{color: #005444; font-size: 20px; font-weight: 700; padding: 10px; 
+    cursor: pointer;}
+}
+@media (max-width:1392px){
+        .frame-right, .frame-left{display: none;}
+}
+
+@media (max-width:991px){
+.modal-body{padding: 50px 20px;}
+    .web{margin-bottom: 40px; cursor: pointer;}
+            .web h2{color: #005444; font-size: 36px; font-weight: 900; margin-top: 0px; 
+            text-align: center; padding: 50px;}
+    .container{padding: 0px 40px;}
+    .photo{padding: 0 60px; bottom: 0px;}
+}
+
+@media (max-width:767px){
+    .container{padding: 20px 40px;}
+    .intro-img{width: 70%;}
+    .pro-1{font-size: 16px;padding-top: 30px;}
+    .photo{position: static; right: auto; margin: auto; padding: 0;width: 60%; margin-top: 30px;}
+    
+    .web{margin-top: 30px;}
+    .web-1, .web-2{margin-top: 30px;}
+    .web-1 h2,  .web-2 h2{padding: 10px;}
+    .design-pro .flex-box>div{width: 50%;}
+    .design-web .flex-box>div{width: 50%;}
+
+    .modal-body{width: 90%; }
+    .modal-wrap{padding-top: 30px;}
+    .modal-body p{font-weight: 500;}
+    .modal .close{font-size: 24px;}
+    .modal h3 {font-size: 20px; padding: 20px 0;}
+
+}
+
+
+</style>
+</head>
+<body>
+
+<section class="intro">
+    <div class="txt container">
+        <ul>
+            <li>
+            UI designer
+            </li>
+        </ul>
+    </div>
+    
+    <div class="intro-img">
+        <img src="img/intro.png" alt="">
+    </div>   
+
+</section>
+
+
+<section class="pro">
+  <div class="container">
+    <div class="pro-1">
+      <h2>익숙한 틀 위에<br>
+          새로운 가능성을 더하는 디자이너 <span>"조혁재"</span> 입니다.
+      </h2>
+      <p>
+        하나의 바탕은 그대로이지만, 그 위에 담기는 작품은 언제나 새롭습니다. <br>
+        변하지 않는 바탕 위에서 무한한 상상력을 펼쳐내는 디자이너입니다.
+      </p>
+    </div>
+
+    <div class="photo">        
+        <img src="img/photo-1 473.png" alt="">       
+    </div>
+  </div>
+ 
+<!-- 프레임 좌/우 ==============================  -->
+
+<div class="frame-left">
+    <img src="img/frame-left.png" alt="">
+</div>
+<div class="frame-right">
+    <img src="img/frame-right.png" alt="">
+</div>
+</section>
+
+
+<section class="design-pro  ">
+
+    <div class="container">  
+
+        <div class="web-1">
+            <h2>PROMOTION</h2>
+                <div class="flex-box">
+
+                    <div>
+                        <div id="forment">
+                            <img src="img/forment.png" alt="" onclick="open_modal(0)">
+                                <p>상세페이지<br>
+                                    포멘트</p>
+                        </div>
+                    </div>
+                    <div>
+                    <div>
+                            <img src="img/bed.png" alt="" onclick="open_modal(1)">
+                            <p>상세페이지<br>
+                                침대</p>
+                    </div>
+                    </div>
+                    <div>
+                        <div>
+                            <img src="img/mud.png" alt="" onclick="open_modal(2)">
+                            <p>상세페이지<br>
+                                무드등</p>
+                        </div>
+                    </div>
+                    <div>
+                    <div>
+                            <img src="img/gasub.png" alt="" onclick="open_modal(3)">
+                            <p>상세페이지<br>
+                                가습기</p>
+                    </div>
+                    </div>
+                    <div>
+                    <div>
+                        <img src="img/tonner.png" alt="" onclick="open_modal(4)">
+                            <p>배너디자인<br>
+                                모바일</p>
+                    </div>
+                    </div>
+                    <div>
+                    <div>
+                            <img src="img/speaker.png" alt="" onclick="open_modal(5)">
+                            <p>배너디자인<br>
+                                PC</p>
+                    </div>
+                    </div>
+
+                    <div>
+                    <div>
+                            <img src="img/event.png" alt="" onclick="open_modal(6)">
+                            <p>이벤트디자인<br>
+                                모바일</p>
+                    </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <!-- 프레임 좌/우 ==============================  -->
+
+<div class="frame-left">
+    <img src="img/frame-left.png" alt="">
+</div>
+<div class="frame-right">
+    <img src="img/frame-right.png" alt="">
+</div>
+
+
+
+
+</section>
+
+<section class="design-web  ">
+
+    <div class="container">
+        <div class="web ">
+            <h2 class="title">WEB DESIGN</h2>
+                    <div class="title-1 flex-box">
+                    
+                                <div>
+                                       
+                                           <div>
+                                               <img src="img/bmw.jpg" alt=""onclick="open_modal(6)">
+                                                <p>반응형 웹페이지<br>
+                                                    BMW</p>
+                                           </div>
+                                      
+                                </div>
+                                <div>
+                                   <div>
+                                       
+                                            <img src="img/dan.png" alt=""onclick="open_modal(7)">
+                                                    <p>반응형 웹페이지<br>
+                                                        단국대학교</p>
+                                   </div>
+                                    
+                                </div>
+                    </div>                    
+        </div>   
+
+ </div>
+    <!-- 프레임 좌/우 ==============================  -->
+
+<div class="frame-left">
+    <img src="img/frame-left.png" alt="">
+</div>
+<div class="frame-right">
+    <img src="img/frame-right.png" alt="">
+</div>
+
+
+
+
+</section>
+
+
+<!-- 프로모션 모달창 구역  =====================================   -->
+
+<!-- 프로모션1 ===========   -->
+<div class="modal"> 
+            <div class="modal-wrap">
+                <div class="modal-body">
+                    <div class="close"><i class="fa-solid fa-xmark"></i></div>
+    
+                    <h3>FORMENT
+                        
+                    </h3>
+                    <p>화이트와 블랙 중심의 심플한 레이아웃을 적용해 제품의 고급스러움과 순수한 이미지를 표현했습니다<br>
+                        여백을 활용한 배치와 패키지 연출을 통해 브랜드 아이덴티티를 강화하였으며,<br>
+                        소비자가 직관적으로 제품의 가치를 느낄 수 있도록 디자인했습니다.</p>
+                    <img src="img/page-1-1.png" alt="">
+                    <img src="img/page-1-2.png" alt="">
+                    <img src="img/page-1-3.png" alt="">
+                    <img src="img/page-1-4.png" alt="">
+                    <img src="img/page-1-5.png" alt="">
+                    <img src="img/page-1-6.png" alt="">
+                </div>  
+            </div>
+</div>
+
+<!-- 프로모션2 ===========   -->
+<div class="modal"> 
+            <div class="modal-wrap">
+                <div class="modal-body">
+                    <div class="close"><i class="fa-solid fa-xmark"></i></div>
+    
+                    <h3>수납형 원목 침대</h3>
+                    
+                    <p>내추럴한 원목 질감과 따뜻한 톤을 활용하여 편안하면서도 자연스러운 침실 분위기를 구현했습니다<br>
+                    실용적인 수납 기능을 더해 공간 활용도를 높였으며, 감성적인 디자인과 기능성을 균형 있게 담아낸 것이 특징입니다.</p>
+                    <img src="img/page-2-1.png" alt="">
+                    <img src="img/page-2-2.png" alt="">
+                    <img src="img/page-2-3.png" alt="">
+                    <img src="img/page-2-4.png" alt="">
+                    <img src="img/page-2-5.png" alt="">
+                    <img src="img/page-2-6.png" alt="">
+                </div>  
+            </div>
+</div>
+
+<!-- 프로모션3 ===========   -->
+<div class="modal"> 
+            <div class="modal-wrap">
+                <div class="modal-body">
+                    <div class="close"><i class="fa-solid fa-xmark"></i></div>
+    
+                    <h3>실리콘 무드등</h3>
+                    
+                    <p>귀여운 캐릭터 디자인과 은은한 조명을 결합하여, 감성적인 무드를 전달할 수 있도록 구성했습니다. <br>
+                    터치 기능과 다양한 컬러 연출을 통해 사용자 경험을 확장하며, 일상 속에서 편안한 휴식과 즐거움을 제공하는 데 중점을 두었습니다.</p>
+                    <img src="img/page-3-1.png" alt="">
+                    <img src="img/page-3-2.png" alt="">
+                    <img src="img/page-3-3.png" alt="">
+                    <img src="img/page-3-4.png" alt="">
+                    <img src="img/page-3-5.png" alt="">
+                    <img src="img/page-3-6.png" alt="">
+                </div>  
+            </div>
+</div>
+
+<!-- 프로모션4 ===========   -->
+<div class="modal"> 
+            <div class="modal-wrap">
+                <div class="modal-body">
+                    <div class="close"><i class="fa-solid fa-xmark"></i></div>
+    
+                    <h3>불멍 가습기</h3>
+                    
+                    <p>불꽃을 형상화한 조명 효과와 미니멀한 디자인으로, 공간에 아늑하고 힐링되는 분위기를 연출했습니다.  <br>
+                        작은 사이즈에도 필수 기능을 집약하여 실용성을 강조하였으며, 감각적인 무드와 안정감을 동시에 느낄 수 있도록 디자인했습니다.</p>
+                    <img src="img/page-4-1.png" alt="">
+                    <img src="img/page-4-2.png" alt="">
+                    <img src="img/page-4-3.png" alt="">
+                    <img src="img/page-4-4.png" alt="">
+                    <img src="img/page-4-5.png" alt="">
+                    <img src="img/page-4-6.png" alt="">
+                </div>  
+            </div>
+</div>
+
+<!-- 프로모션5 ===========   -->
+<div class="modal"> 
+            <div class="modal-wrap">
+                <div class="modal-body">
+                    <div class="close"><i class="fa-solid fa-xmark"></i></div>
+                    <h3>NARD</h3>
+                    <img src="img/banner-mo.png" alt="">
+                </div>  
+            </div>
+</div>
+
+<!-- 프로모션6 ===========   -->
+<div class="modal"> 
+            <div class="modal-wrap">
+                <div class="modal-body">
+                    <div class="close"><i class="fa-solid fa-xmark"></i></div>
+                    <h3>BALMUDA</h3>
+                    <img src="img/banner-pc.png" alt="">
+                </div>  
+            </div>
+</div>
+<!-- 프로모션7 ===========   -->
+<div class="modal"> 
+            <div class="modal-wrap">
+                <div class="modal-body">
+                    <div class="close"><i class="fa-solid fa-xmark"></i></div>
+                    <h3>EVENT</h3>
+                    <img src="img/event-modal.png" alt="">
+                </div>  
+            </div>
+</div>
+
+
+
+
+<!-- 웹 모달창 구역  =====================================   -->
+
+<!-- 웹 디자인 1 ===========   -->
+<div class="modal pc-modal"> 
+            <div class="modal-wrap">
+                <div class="modal-body">
+                    <div class="close"><i class="fa-solid fa-xmark"></i></div>
+
+                    <img src="img/bmw-page-1.jpg" alt="">
+                    <img src="img/bmw-page-2.jpg" alt="">
+                    <img src="img/bmw-page-3.jpg" alt="">
+                    <img src="img/bmw-page-4.jpg" alt="">                  
+                   <div> <a class="page" href="pro1/index.html" target="_blank">웹 페이지 바로가기</a></div>
+                    
+                </div>  
+            </div>
+</div>
+
+<!-- 웹 디자인 1 ===========   -->
+<div class="modal pc-modal"> 
+            <div class="modal-wrap">
+                <div class="modal-body">
+                    <div class="close"><i class="fa-solid fa-xmark"></i></div>
+
+                    <img src="img/dan-page-1.jpg" alt="">
+                    <img src="img/dan-page-2.jpg" alt="">
+                    <img src="img/dan-page-3.jpg" alt="">
+                    <img src="img/dan-page-4.jpg" alt="">
+                    <img src="img/dan-page-5.jpg" alt="">
+                   <div> <a class="page" href="pro2/index.html" target="_blank">웹 페이지 바로가기</a></div>
+                    
+                </div>  
+            </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+<script>
+    let modal = document.querySelectorAll('.modal');  /* 모달창 */
+
+function open_modal(modal_num){  
+        $('body').css('overflow','hidden');      
+
+        modal[modal_num].style.display ='block';  /* 매개변수를 통하여 배열번호를 전달받아 해당 클래스(모달창)를 열어줌 */
+        
+            $('.close').click(function(){
+            $('body').css('overflow','auto');
+            $('.modal').css('display','none');
+                        });  
+        } ;
+        
+</script>
+</body>
+</html>
